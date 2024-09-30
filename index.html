@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Ficha Médica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Formulario de Ficha Médica</h2>
+        <form id="fichaMedicaForm">
+            <label for="rut">Rut:</label>
+            <input type="text" id="rut" name="rut" required><br>
+
+            <label for="nombres">Nombres:</label>
+            <input type="text" id="nombres" name="nombres" required><br>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required><br>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required><br>
+
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad" required><br>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required><br>
+
+            <label for="estadoCivil">Estado Civil:</label>
+            <select id="estadoCivil" name="estadoCivil" required>
+                <option value="soltero">Soltero</option>
+                <option value="casado">Casado</option>
+                <option value="viudo">Viudo</option>
+                <option value="divorciado">Divorciado</option>
+            </select><br>
+
+            <label for="comentarios">Comentarios:</label>
+            <textarea id="comentarios" name="comentarios"></textarea><br>
+
+            <button type="button" onclick="guardarFicha()">Guardar</button>
+            <button type="reset">Limpiar</button>
+            <button type="button" onclick="cerrarFormulario()">Cerrar</button>
+        </form>
+
+        <h3>Búsqueda por Apellido</h3>
+        <input type="text" id="buscarApellido" placeholder="Ingrese apellido">
+        <button type="button" onclick="buscarPorApellido()">Buscar</button>
+        <div id="resultadosBusqueda"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
